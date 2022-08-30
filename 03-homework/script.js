@@ -28,11 +28,11 @@ function upperName(string) {
 }
 
 //function №4
-function sumTAX(payment) {
+function sumTax(payment) {
   let sum = payment / 100;
-  const formulaTAX = sum * (18 + 1.5);
+  const formulaTax = sum * (18 + 1.5);
 
-  return payment - formulaTAX;
+  return payment - formulaTax;
 }
 
 //function №5
@@ -81,11 +81,11 @@ function getRandomPassword(symbols = 8) {
 //function №9
 function deleteLetters(letter, word) {
   let fullWord = "";
-  const defaultletter = letter.toLowerCase();
+  const defaultLetter = letter.toLowerCase();
   const defaultWord = word.toLowerCase();
 
   for (let i = 0; i < defaultWord.length; i++) {
-    fullWord += defaultWord[i] === defaultletter ? "" : defaultWord[i];
+    fullWord += defaultWord[i] === defaultLetter ? "" : defaultWord[i];
   }
   return fullWord;
 }
@@ -100,19 +100,19 @@ function isPalindrome(string) {
 //function №11
 function deleteDuplicateLetter(string) {
   const sentence = string.toLowerCase().split("");
-  const delLetter = sentence.filter(
+  const deleteLetters = sentence.filter(
     (element, index, array) =>
       array.indexOf(element) === array.lastIndexOf(element)
   );
 
-  return delLetter.join("");
+  return deleteLetters.join("");
 }
 
 // RESULTS
 console.log(`Функція №1 - ${getMaxDigit(38596)}`);
 console.log(`Функція №2 - ${powDegree(3, 3)}`);
 console.log(`Функція №3 - ${upperName("wilLiAm")}`);
-console.log(`Функція №4 - ${sumTAX(1000)}`);
+console.log(`Функція №4 - ${sumTax(1000)}`);
 console.log(`Функція №5 - ${getRandomNumber(1, 10)}`);
 console.log(`Функція №6 (Balaclava - "a") - ${countLetters("a", "Balaclava")}`);
 console.log(`Функція №7.1 (100$) - ${convertCurrency("100$")}`);
