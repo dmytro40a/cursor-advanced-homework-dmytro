@@ -2,10 +2,12 @@
 function getMaxDigit(number) {
   let digitNumber = number.toString();
   let maxNumber = +digitNumber[0];
+  let defaultNumber;
 
   for (let i = 0; i <= digitNumber.length; i++) {
-    if (+digitNumber[i] > maxNumber) {
-      maxNumber = +digitNumber[i];
+    defaultNumber = +digitNumber[i];
+    if (defaultNumber > maxNumber) {
+      maxNumber = defaultNumber;
     }
   }
   return maxNumber;
@@ -14,10 +16,11 @@ function getMaxDigit(number) {
 //function №2
 const powDegree = (number, degree) => {
   let result = 1;
+  let currentDegree = degree;
 
-  while (degree) {
+  while (currentDegree) {
     result = number * result;
-    degree = degree - 1;
+    currentDegree = currentDegree - 1;
   }
   return result;
 };
@@ -30,14 +33,15 @@ function upperName(string) {
 //function №4
 function sumTax(payment) {
   let sum = payment / 100;
-  const formulaTax = sum * (18 + 1.5);
+  const amountTax = 18 + 1.5;
+  const formulaTax = sum * amountTax;
 
   return payment - formulaTax;
 }
 
 //function №5
-function getRandomNumber(N, M) {
-  return Math.floor(Math.random() * (M - N + 1) + N);
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //function №6
@@ -85,7 +89,9 @@ function deleteLetters(letter, word) {
   const defaultWord = word.toLowerCase();
 
   for (let i = 0; i < defaultWord.length; i++) {
-    fullWord += defaultWord[i] === defaultLetter ? "" : defaultWord[i];
+    if (defaultWord[i] !== defaultLetter) {
+      fullWord += defaultWord[i];
+    }
   }
   return fullWord;
 }
