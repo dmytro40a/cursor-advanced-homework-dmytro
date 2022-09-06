@@ -30,7 +30,7 @@ function studentsPairs(students) {
 }
 
 const pairs = studentsPairs(students);
-console.log({ pairs });
+console.log(pairs);
 
 // Second task
 function selectedThemes(pairs) {
@@ -43,7 +43,7 @@ function selectedThemes(pairs) {
 }
 
 const studentsThemes = selectedThemes(pairs);
-console.log({ studentsThemes });
+console.log(studentsThemes);
 
 // Third task
 function studentsMarks(students, marks) {
@@ -55,7 +55,7 @@ function studentsMarks(students, marks) {
 }
 
 const scores = studentsMarks(students, marks);
-console.log({ scores });
+console.log(scores);
 
 // Fourth task
 function randomNumber(min, max) {
@@ -75,4 +75,4 @@ function randomMark(studentsThemes) {
 }
 
 const randomScores = randomMark(studentsThemes);
-console.log({ randomScores });
+console.log(randomScores);
