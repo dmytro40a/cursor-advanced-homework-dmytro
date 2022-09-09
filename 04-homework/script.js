@@ -10,7 +10,8 @@ const marks = [4, 5, 5, 3, 4, 5];
 // First task
 function studentsPairs(students) {
   const male = [],
-    female = [];
+    female = [],
+    couple = [];
   for (let i = 0; i < students.length; i++) {
     if (students[i].endsWith("а")) {
       female.push(students[i]);
@@ -19,9 +20,9 @@ function studentsPairs(students) {
     male.push(students[i]);
   }
   for (let i = 0; i < female.length; i++) {
-    female[i] = [male[i], female[i]];
+    couple[i] = [male[i], female[i]];
   }
-  return female;
+  return couple;
 }
 
 const pairs = studentsPairs(students);
@@ -58,11 +59,10 @@ function randomNumber(min, max) {
 }
 
 function randomMark(studentsThemes) {
-  const randomThemesScore = [];
+  let randomThemesScore = randomNumber(0, marks.length - 1);
   const randomThemesResult = [];
   for (let i = 0; i < studentsThemes.length; i++) {
-    randomThemesScore.push(randomNumber(0, marks.length - 1));
-    randomThemesResult.push(studentsThemes[i].concat(randomThemesScore[i]));
+    randomThemesResult.push(studentsThemes[i].concat(randomThemesScore));
   }
   return randomThemesResult;
 }
