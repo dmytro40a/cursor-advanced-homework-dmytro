@@ -1,6 +1,6 @@
 // #1
 const getRandomArray = (length, min, max) => {
-  const randomNumber = () => Math.floor(Math.random() * (max - min++)) + min;
+  const randomNumber = () => Math.floor(Math.random() * (max - min + 1)) + min;
   const resultRandomArray = [];
 
   for (let i = 0; i < length; i++) {
@@ -9,17 +9,15 @@ const getRandomArray = (length, min, max) => {
 
   return resultRandomArray;
 };
-console.log(getRandomArray(12, 1, 50));
+console.log(getRandomArray(10, 1, 10));
 
 // #2
 const getModa = (...numbers) => {
-  const mode = [];
+  const mode = {};
   let max = 0,
     count = 0;
 
-  for (let i = 0; i < numbers.length; i++) {
-    const item = numbers[i];
-
+  numbers.forEach((item) => {
     if (mode[item]) {
       mode[item]++;
     } else {
@@ -30,7 +28,7 @@ const getModa = (...numbers) => {
       max = item;
       count = mode[item];
     }
-  }
+  });
 
   return max;
 };
@@ -38,27 +36,46 @@ console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // #3
 const getAverage = (...numbers) => {
-  let total = 0;
+  // reduce
+  const total = numbers.reduce((a, b) => a + b, 0) / numbers.length;
 
-  for (let i = 0; i < numbers.length; i++) {
+  return total;
+
+  // forEach
+  /*   let total = 0;
+  numbers.forEach((num) => {
+    total += num;
+  });
+
+  return total / numbers.length; */
+
+  // loop
+  /*   let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
     total += numbers[i];
   }
 
-  return total / numbers.length;
+  return total / numbers.length; */
 };
 console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 // #4
 const getMedian = (...numbers) => {
   const numbersLength = numbers.length;
+  const firstNumber = 1;
+  const secondNumber = 2;
 
   numbers.sort((a, b) => a - b);
 
-  if (numbersLength % 2 === 0) {
-    return (numbers[numbersLength / 2 - 1] + numbers[numbersLength / 2]) / 2;
+  if (numbersLength % secondNumber === 0) {
+    return (
+      (numbers[numbersLength / secondNumber - firstNumber] +
+        numbers[numbersLength / secondNumber]) /
+      secondNumber
+    );
   }
 
-  return numbers[(numbersLength - 1) / 2];
+  return numbers[(numbersLength - firstNumber) / secondNumber];
 };
 console.log(getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 

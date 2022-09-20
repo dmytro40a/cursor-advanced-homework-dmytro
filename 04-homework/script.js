@@ -59,9 +59,9 @@ function randomNumber(min, max) {
 }
 
 function randomMark(studentsThemes) {
-  let randomThemesScore = randomNumber(0, marks.length - 1);
   const randomThemesResult = [];
   for (let i = 0; i < studentsThemes.length; i++) {
+    let randomThemesScore = randomNumber(0, marks.length - 1);
     randomThemesResult.push(studentsThemes[i].concat(randomThemesScore));
   }
   return randomThemesResult;
