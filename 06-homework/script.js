@@ -32,11 +32,10 @@ const students = [
 // #1
 const getSubjects = (student) => {
   const studentKeys = Object.keys(student.subjects);
-  let studentSubjects = [];
 
-  studentKeys.forEach((sk) => {
+  let studentSubjects = studentKeys.map((sk) => {
     let upperSubject = sk[0].toUpperCase() + sk.slice(1);
-    studentSubjects.push(upperSubject.replace("_", " "));
+    return upperSubject.replace("_", " ");
   });
   return studentSubjects;
 };
@@ -52,12 +51,11 @@ console.log(getAverageMark(students[0]));
 
 // #3
 const getStudentInfo = (student) => {
-  const StudentInfo = {
+  return {
     name: student.name,
     course: student.course,
     averageMark: getAverageMark(student),
   };
-  return StudentInfo;
 };
 console.log(getStudentInfo(students[0]));
 
@@ -67,12 +65,11 @@ console.log(getStudentsNames(students));
 
 // #5
 const getBestStudent = (students) => {
-  const bestMark = [];
-
-  for (let i = 0; i < students.length; i++) {
-    bestMark.push(+getAverageMark(students[i]));
-  }
-  maxMark = bestMark.indexOf(Math.max(...bestMark));
+  const bestMark = students.map((elem, index) => {
+    getAverageMark(elem);
+    return index;
+  });
+  let maxMark = bestMark.indexOf(Math.max(...bestMark));
   return students[maxMark].name;
 };
 console.log(getBestStudent(students));

@@ -37,9 +37,9 @@ console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 // #3
 const getAverage = (...numbers) => {
   // reduce
-  const total = numbers.reduce((a, b) => a + b, 0) / numbers.length;
+  let total = numbers.reduce((a, b) => a + b, 0);
 
-  return total;
+  return total / numbers.length;
 
   // forEach
   /*   let total = 0;
@@ -62,20 +62,18 @@ console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 // #4
 const getMedian = (...numbers) => {
   const numbersLength = numbers.length;
-  const firstNumber = 1;
-  const secondNumber = 2;
 
   numbers.sort((a, b) => a - b);
 
-  if (numbersLength % secondNumber === 0) {
-    return (
-      (numbers[numbersLength / secondNumber - firstNumber] +
-        numbers[numbersLength / secondNumber]) /
-      secondNumber
-    );
+  if (numbersLength % 2 === 0) {
+    let firstNumberIndex = numbersLength / 2 - 1;
+    let secondNumberIndex = numbersLength / 2;
+    let firstNumber = numbers[firstNumberIndex];
+    let secondNumber = numbers[secondNumberIndex];
+    return (firstNumber + secondNumber) / 2;
   }
 
-  return numbers[(numbersLength - firstNumber) / secondNumber];
+  return numbers[(numbersLength - 1) / 2];
 };
 console.log(getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
