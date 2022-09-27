@@ -65,9 +65,8 @@ console.log(getStudentsNames(students));
 
 // #5
 const getBestStudent = (students) => {
-  const bestMark = students.map((elem, index) => {
-    getAverageMark(elem);
-    return index;
+  const bestMark = students.map((elem) => {
+    return +getAverageMark(elem);
   });
   let maxMark = bestMark.indexOf(Math.max(...bestMark));
   return students[maxMark].name;
