@@ -1,0 +1,61 @@
+.wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./img/throne.jpg");
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+.notes>p {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 0.7rem brown;
+}
+
+.notes-img {
+    padding-top: 20px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.key {
+    border: 0.4rem solid brown;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 0.5rem black;
+}
+
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: rgb(231, 181, 1);
+    box-shadow: rgb(225, 179, 14) 0px 0px 1rem;
+}
