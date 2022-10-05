@@ -63,11 +63,16 @@ console.log(studentMark.scores);
 
 // Advanced
 class BudgetStudent extends Student {
+  constructor(university, course, fullName, marks) {
+    super(university, course, fullName, marks);
+    setInterval(() => console.log(studentBill.getScholarship()), 30000);
+  }
   getScholarship() {
     const scholarshipAverageMark = 4.0;
-    return this.getDismissed && this.getAverageMark() >= scholarshipAverageMark
-      ? console.log("Ви отримали 400$ стипендії!")
-      : console.log("Тепер ви змушені шукати роботу:(");
+    const currentAverageMark = this.getAverageMark() >= scholarshipAverageMark;
+    return !this.dismiss && currentAverageMark
+      ? "Ви отримали 400$ стипендії!"
+      : "Тепер ви змушені шукати роботу:(";
   }
 }
 const studentBill = new BudgetStudent(
@@ -76,4 +81,3 @@ const studentBill = new BudgetStudent(
   "Білл Гейтс",
   [4, 5, 4, 4]
 );
-setInterval(() => studentBill.getScholarship(), 30000);

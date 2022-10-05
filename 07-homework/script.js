@@ -25,17 +25,20 @@ console.log(getTotalTaxes.call(litva));
 
 // #4
 function getMySalary() {
-  let sumSalary = getRandomNumber(1500, 2000);
-  let sumTaxes = +(sumSalary * this.tax).toFixed(2);
-  let sumProfit = +(sumSalary - sumTaxes).toFixed(2);
+  const mySalaryTimer = () => {
+    let sumSalary = getRandomNumber(1500, 2000);
+    let sumTaxes = +(sumSalary * this.tax).toFixed(2);
+    let sumProfit = +(sumSalary - sumTaxes).toFixed(2);
 
-  return {
-    salary: sumSalary,
-    taxes: sumTaxes,
-    profit: sumProfit,
+    return {
+      salary: sumSalary,
+      taxes: sumTaxes,
+      profit: sumProfit,
+    };
   };
+  setInterval(() => console.log(mySalaryTimer()), 10000);
 }
-setInterval(() => console.log(getMySalary.call(ukraine)), 10000);
+getMySalary.call(ukraine);
 
 // random number
 function getRandomNumber(min, max) {
