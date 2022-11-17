@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    background-color: #151515;
+    color: #ffffff;
+    background-image: url(../img/star-wars-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+#language {
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    color: #ffffff;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    padding: 0 5px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 5px;
+    background: #303030;
+}
+
+.nav-bar {
+    text-align: center;
+}
+
+.nav-logo {
+    margin: 15px auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.nav-list>li {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+#episode-list {
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 5px;
+    background: #303030;
+}
+
+.characters-list,
+.planets-list,
+.planets-previous,
+.planets-next {
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: #303030;
+}
+
+#language:hover {
+    cursor: pointer;
+    color: #FFE81F;
+}
+
+#episode-list:hover {
+    cursor: pointer;
+    color: #FFE81F;
+    border: solid 2px #ffffff;
+}
+
+.characters-list:hover {
+    cursor: pointer;
+    color: #FFE81F;
+    border: solid 2px #ffffff;
+}
+
+.planets-list:hover {
+    cursor: pointer;
+    color: #FFE81F;
+    border: solid 2px #ffffff;
+}
+
+.planets-previous:hover {
+    cursor: pointer;
+    color: #FFE81F;
+    border: solid 2px #ffffff;
+}
+
+.planets-next:hover {
+    cursor: pointer;
+    color: #FFE81F;
+    border: solid 2px #ffffff;
+}
+
+/* MAIN */
+
+.main {
+    background-color: #151515;
+    width: 100%;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-cards {
+    position: relative;
+    background-color: #303030;
+    border: #FFE81F solid 1px;
+    border-radius: 10px;
+    margin: 30px;
+    width: 250px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    color: #ffffff;
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.character-photo {
+    border-radius: 10px;
+    height: 74%;
+    width: 90%;
+    object-fit: cover;
+    max-height: 250px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.gender-icon {
+    height: 35px;
+    margin: 5px 0;
+}
+
+.planets-photo {
+    border-radius: 10px;
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+    max-height: 250px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.main-cards:hover {
+    border: #ffffff solid 1px;
+    cursor: pointer;
+}

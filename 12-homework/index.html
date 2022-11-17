@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Homework #12 "SWAPI"</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav-bar">
+          <select id="language">
+            <option value="">English</option>
+            <option value="?format=wookiee">Wookiee</option>
+          </select>
+          <img class="nav-logo" src="./img/sw_logo.png" alt="logo" />
+          <ul class="nav-list">
+            <li>
+              <select id="episode-list">
+                <option value="1">Episode I</option>
+                <option value="2">Episode II</option>
+                <option value="3">Episode III</option>
+                <option value="4">Episode IV</option>
+                <option value="5">Episode V</option>
+                <option value="6">Episode VI</option>
+              </select>
+            </li>
+            <li><button class="characters-list">Get Info</button></li>
+            <li class="planets-container">
+              <button class="planets-list">Planets</button>
+              <button class="planets-previous">Previous</button>
+              <button class="planets-next">Next</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div id="main-content"></div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
