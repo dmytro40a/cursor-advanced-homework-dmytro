@@ -4,53 +4,388 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework #1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Homework list</title>
   </head>
+  <style>
+    body {
+      background: rgb(227, 227, 227);
+    }
+  </style>
   <body>
-    <div>
-      <ul>
-        <li>git config --global user.name blabla (задати ім'я користувача)</li>
-        <li>
-          git config --global user.email blabal@bla (задати електронну адресу
-          користувача)
-        </li>
-        <li>git init (ініціалізація репозиторію)</li>
-        <li>git status (перевірка стану репозиторію)</li>
-        <li>git add (додати всі файли)</li>
-        <li>git commit (внесення змін)</li>
-        <li>git log (перегляд історії коммітів)</li>
-        <li>git checkout (відміна підготовлених змін)</li>
-        <li>git branch (перегляд списку гілок)</li>
-        <li>git push (надсилання змін у віддалений репозиторій)</li>
-        <li>git pull (отримання змін із віддаленого репозиторію)</li>
-        <li>git merge (злиття віддаленого репозиторію з локальним)</li>
-        <li>git clone (клонування репозиторію)</li>
-      </ul>
-      <p>
-        <em>.gitignore</em> потрібен для приховання файлів та папок від системи
-        контролю версій Git. Зазвичай приховують файли конфігурації (особливо з
-        паролями), тимчасові файли та папки.
-      </p>
-      <h2>Advanced</h2>
-      <ul>
-        <li>
-          git revert (використовується для відкату змін історії коммітів
-          репозиторію)
-        </li>
-        <li>
-          git reset (складний універсальний інструмент для скасування змін)
-        </li>
-        <li>git rebase (спосіб перенести зміни з однієї гілки до іншої)</li>
-        <li>
-          git cherry-pick (бере зміни, що вносяться одним коммітом, і
-          намагається повторно застосувати їх у вигляді нового комміту в
-          поточній гілці)
-        </li>
-        <li>
-          git stash (дозволяє на якийсь час «здати в архів» (або відкласти)
-          зміни, зроблені в робочій копії, щоб ви могли застосувати їх пізніше)
-        </li>
-      </ul>
-    </div>
+    <section id="hw-list">
+      <div class="container mt-3">
+        <h1 class="display-3 text-center">My completed JavaScript homework</h1>
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">ReactJS. SPA. Navigation</h4>
+                <p class="card-text">Homework #18</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/react-hw-spa"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/react-hw-spa/tree/main"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  Class components. Condition and life cycle
+                </h4>
+                <p class="card-text">Homework #17</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/react-hw-timer"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/react-hw-timer/tree/main"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">ReactJS. Hooks</h4>
+                <p class="card-text">Homework #16</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/react-hw-hooks"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/react-hw-hooks/tree/main"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">ReactJS. Basics</h4>
+                <p class="card-text">Homework #15</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/react-hw-basics"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/react-hw-basics/tree/main"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Webpack</h4>
+                <p class="card-text">Homework #14</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/14-homework/dist"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/14-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Symbols. Generators. Iterators.</h4>
+                <p class="card-text">Homework #13</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/13-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/13-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Work with API</h4>
+                <p class="card-text">Homework #12 SWAPI</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/12-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/12-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Async and Date. Promises</h4>
+                <p class="card-text">Homework #11</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/11-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/11-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Events</h4>
+                <p class="card-text">Homework #10</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/10-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/10-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">DOM</h4>
+                <p class="card-text">Homework #9</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/09-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/09-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Prototypes. ES6 Classes</h4>
+                <p class="card-text">Homework #8</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/08-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/08-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Functional Programming</h4>
+                <p class="card-text">Homework #7</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/07-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/07-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Objects</h4>
+                <p class="card-text">Homework #6</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/06-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/06-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Iterating methods of arrays</h4>
+                <p class="card-text">Homework #5</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/05-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/05-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Arrays</h4>
+                <p class="card-text">Homework #4</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/04-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/04-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Functions</h4>
+                <p class="card-text">Homework #3</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/03-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/03-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Cycles and Branches</h4>
+                <p class="card-text">Homework #2</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/02-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/02-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Variables and types</h4>
+                <p class="card-text">Homework #1</p>
+                <div class="text-center">
+                  <a
+                    href="https://dmytro40a.github.io/cursor-advanced-homework-dmytro/01-homework/"
+                    class="btn btn-outline-dark me-2"
+                    >GitHub Pages</a
+                  >
+                  <a
+                    href="https://github.com/dmytro40a/cursor-advanced-homework-dmytro/tree/main/01-homework"
+                    class="btn btn-outline-dark"
+                    >GitHub Repository</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
